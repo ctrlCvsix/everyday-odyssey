@@ -52,7 +52,6 @@ All members affiliated with **SW-Centered University Project Group (SW중심대�
 - `V` — Toggle first-person / third-person view
 - `Mouse Left` — Fire laptop code projectile
 - `E` — Interact with terminals and upload gate
-- `F10` — Debug weapon toggle (development only)
 
 ### Game Loop
 
