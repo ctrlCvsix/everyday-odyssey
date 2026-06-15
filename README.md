@@ -28,16 +28,18 @@ abilities that represent a student's technical resourcefulness under pressure.
 
 ## Team
 
-| Name | Role |
-|---|---|
-| **Wang Jiaxiong** (왕가웅) | Lead |
-| Kim Wolseong (김월성) | Development |
-| Jo Yebong (조예봉) | Development |
-| Gyeong Jaseon (경자선) | Development |
-| Myo Honam (묘호남) | Development |
-| Lee Hee (이희) | Development |
+All members affiliated with **SW-Centered University Project Group (SW중심대학사업단)**, Shinhan University.
 
-**Corporate Mentor:** Seon Sugyun (선수균) — Director, Woosung Information Technology AI Research Institute
+| Role | Name (EN) | Name (KO) |
+|---|---|---|
+| Supervising Professor (지도교수) | **Lee Young-beom** | 이영범 |
+| Mentor (멘토) | **Seon Sugyun** | 선수균 |
+| Team Lead (팀장) | **Wang Jiaxiong** | 왕가웅 |
+| Team Member 1 (팀원1) | Kim Wolseong | 김월성 |
+| Team Member 2 (팀원2) | Jo Yebong | 조예봉 |
+| Team Member 3 (팀원3) | Gyeong Jaseon | 경자선 |
+| Team Member 4 (팀원4) | Myo Honam | 묘호남 |
+| Team Member 5 (팀원5) | Lee Hee | 이희 |
 
 ---
 
