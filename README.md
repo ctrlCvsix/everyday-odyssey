@@ -1,112 +1,165 @@
-# The Everyday Odyssey（日常奥德赛）
+# The Everyday Odyssey
 
-> 🎓 信韩大学 SW中心大学 · Microstone 产学研合作项目  
-> 📅 执行期间：2026.04.01 ~ 2026.08.31  
-> 👥 团队：DAILY (Dynamic Adventure in Lived-Out Yesterday)
-
----
-
-## 📋 项目概况
-
-**The Everyday Odyssey** 是一款基于 **Unity 引擎** 开发的 **3D 校园逃生/生存游戏**。
-
-与传统逃生游戏不同，本作将 **"学业压力"具象化为 AI 敌人**，通过非暴力、心理压力驱动的方式，还原大学生活中的紧迫感。玩家利用 **笔记本电脑技能系统** 与压力 AI 进行策略博弈，在限定时间内完成逃脱目标。
-
-| 项目 | 详情 |
-|------|------|
-| 游戏类型 | 3D 校园逃生 / 生存游戏（非暴力） |
-| 开发引擎 | Unity |
-| 目标平台 | PC |
-| 开发周期 | 8 周（4个双周冲刺） |
-| 语言支持 | 中文 / 韩文 |
+> **Team DAILY** — Dynamic Adventure in Lived-Out Yesterday  
+> Shinhan University · SW-Centered University · Microstone Industry-Academia Project  
+> 2026.04.01 – 2026.08.31
 
 ---
 
-## 👥 团队成员
+## Overview
 
-| 姓名 | 角色 |
-|------|------|
-| **王佳雄 (왕가웅)** | 队长 |
-| 金月成 (김월성) | 开发 |
-| 赵艺峰 (조예봉) | 开发 |
-| 景子善 (경자선) | 开发 |
-| 苗浩南 (묘호남) | 开发 |
-| 李熙 (이희) | 开发 |
+**The Everyday Odyssey** is a 3D campus escape game prototype built with Unity. It
+replaces traditional horror antagonists (monsters, killers) with an abstract
+concept made tangible: **Academic Stress AI** that patrols corridors, pursues the
+player, and scales in difficulty as deadlines approach. The player fights back not
+with weapons, but with a **Laptop Skill System** — a set of cooldown-gated
+abilities that represent a student's technical resourcefulness under pressure.
 
-**企业导师：** 鲜于均 (선수균) — 宇成信息技术 AI 研究所 所长
+### Key Differentiators
 
----
-
-## 🎮 核心玩法
-
-### 操作方式
-- `WASD` 移动 | `Space` 跳跃 | `Shift` 疾跑（消耗体力）
-- 鼠标旋转视角 | 快捷键释放技能
-- 环境交互：搜索逃脱线索
-
-### 核心机制
-
-| 机制 | 说明 |
-|------|------|
-| **学业压力 AI** | 在校园中巡逻并追击玩家，随时间增强 |
-| **NavMesh 导航** | AI 使用 A* 算法实时计算最优路径 |
-| **动态难度** | AI 速度、侦测半径随时间指数级增长 |
-
-### 💻 笔记本电脑技能系统
-
-| 技能 | 效果 | 冷却 |
-|------|------|------|
-| ⏪ **时间回溯** | 回溯到数秒前的位置，修正操作失误 | 45s |
-| 🧊 **敌人冻结** | 暂时冻结压力 AI 行动 | 30s |
-| 👥 **分身生成** | 制造诱饵干扰 AI 追踪路线 | 20s |
+| Conventional Escape Games | The Everyday Odyssey |
+|---|---|
+| Monsters, killers, supernatural entities | Academic Stress AI (visualized real-life pressure) |
+| Gore, violence, jump scares | Non-violent, psychological tension |
+| Flashlight, hiding, weapons | Laptop skills: Time Rewind, Enemy Freeze, Clone Decoy |
+| Pure survival / escape | Resource management, tactical skill play, spatial exploration |
 
 ---
 
-## 📅 开发路线图
+## Team
+
+| Name | Role |
+|---|---|
+| **Wang Jiaxiong** (왕가웅) | Lead |
+| Kim Wolseong (김월성) | Development |
+| Jo Yebong (조예봉) | Development |
+| Gyeong Jaseon (경자선) | Development |
+| Myo Honam (묘호남) | Development |
+| Lee Hee (이희) | Development |
+
+**Corporate Mentor:** Seon Sugyun (선수균) — Director, Woosung Information Technology AI Research Institute
+
+---
+
+## Core Gameplay
+
+### Controls
+- `WASD` — Move
+- `Space` — Jump
+- `Shift` — Sprint (consumes stamina)
+- `V` — Toggle first-person / third-person view
+- `Mouse Left` — Fire laptop code projectile
+- `E` — Interact with terminals and upload gate
+- `F10` — Debug weapon toggle (development only)
+
+### Game Loop
 
 ```
-Phase 1 (1-2周)              Phase 2 (3-4周)
-┌──────────────────┐        ┌──────────────────┐
-│ 基础搭建          │   →    │ 核心机制          │
-│ · Unity 校园场景  │        │ · NavMesh AI 巡逻 │
-│ · WASD 移动控制  │        │ · 时间/失败判定   │
-└──────────────────┘        └──────────────────┘
-        ↓                            ↓
-Phase 3 (5-6周)              Phase 4 (7-8周)
-┌──────────────────┐        ┌──────────────────┐
-│ 技能与UI          │   →    │ 打磨优化          │
-│ · 笔记本技能系统  │        │ · 音效/音乐       │
-│ · 体力/计时/小地图 │       │ · 难度曲线调整    │
-└──────────────────┘        │ · Bug修复 → Demo  │
-                             └──────────────────┘
+Environment Mapping → Stress Avoidance → Skill Mitigation → Exit Logic
 ```
 
----
+1. Explore the 3D campus (classrooms, corridors, plaza).
+2. Avoid Academic Stress AI enemies that patrol via **NavMesh** pathfinding.
+3. Use **laptop skills** to disrupt, misdirect, or escape pursuers.
+4. Hack all five mentor review terminals scattered across the map.
+5. Return to the Twin Black Pillars and upload the final defense build.
 
-## 📂 仓库文件
+### Laptop Skill System
 
-| 文件 | 说明 |
-|------|------|
-| `TalkFile.pdf` | 第1次导师指导报告（2026.4.23）— 包含游戏系统入门、策划规格书、项目企划指南 |
-| `1조 계획서.docx` | 项目计划书（韩文版）— 背景调查、目标内容、预期效果 |
-| `1组计划书.docx` | 项目计划书（中文版）— 与韩文版对应 |
+| Skill | Technical Implementation | Cooldown | Strategic Use |
+|---|---|---|---|
+| **Time Rewind** | Circular buffer recording last 5 s of Transform state; replays in reverse. | 45 s | Undo positioning mistakes; escape dead-ends. |
+| **Enemy Freeze** | Temporarily suspends the target NavMesh agent's update loop. | 30 s | Buy time to cross exposed corridors or activate terminals. |
+| **Clone Decoy** | Instantiates a decoy GameObject with higher AI detection priority at the player's current position. | 20 s | Redirect AI path-planning; create tactical openings. |
 
----
+### Win / Lose Conditions
 
-## 🎯 项目价值
-
-1. **学术展示** — 适用于课程设计、毕业作品，展示游戏开发全流程能力
-2. **就业作品集** — 展现在 Unity、AI 行为设计、系统架构方面的技术实力
-3. **扩展潜力** — 可扩展多地图、多人模式，或用于教育/心理健康领域
-
----
-
-## 🔗 相关链接
-
-- GitHub: [github.com/ctrlCvsix/everyday-odyssey](https://github.com/ctrlCvsix/everyday-odyssey)
-- 学校：信韩大学 (신한대학교) SW 中心大学事业团
-- 项目归属：Microstone (마이크로스톤) 产学研合作项目
+- **Win** — Hack all 5 terminals, then stand between the Twin Black Pillars to upload the final build.
+- **Lose** — Get caught 3 times by teachers, or let the countdown timer expire (7 minutes).
 
 ---
 
-> *"The Everyday Odyssey 不仅是一场关于逃离校园压力的冒险，更是一场关于结构化思维的实践。"*
+## Development Roadmap (8 Weeks)
+
+| Phase | Weeks | Technical Milestone | Deliverable |
+|---|---|---|---|
+| **Phase 1** — Foundation | 1–2 | Character controller, mouse-look, campus greybox scene. | Greybox Build |
+| **Phase 2** — Core Systems | 3–4 | NavMesh baking, AI patrol/chase state machine, time-limit and fail-state logic. | AI Core Demo |
+| **Phase 3** — Skills & UI | 5–6 | Laptop skill manager with cooldown system; HUD (stamina, timer, minimap). | Alpha (Playable) |
+| **Phase 4** — Polish | 7–8 | Sound effects, dynamic difficulty scaling, bug fixes, performance optimization. | Final Demo |
+
+---
+
+## Technology Stack
+
+- **Engine:** Unity 2022.3.62f1
+- **Language:** C#
+- **AI Pathfinding:** Unity NavMesh (A\* runtime)
+- **Assets:** Kenney CC0 (Blocky Characters, City Kit Commercial, City Kit Roads, UI Pack, Interface Sounds, Impact Sounds)
+- **Version Control:** Git
+- **Target Platform:** PC (Windows)
+
+---
+
+## Project Structure
+
+```
+Assets/
+├── Scripts/
+│   ├── Editor/
+│   │   └── SceneBootstrapper.cs     # One-click scene generation
+│   └── Runtime/
+│       ├── GameManager.cs           # Singleton game state, UI binding, CN/KO localization
+│       ├── PlayerController.cs      # Movement, camera, weapons, interaction
+│       ├── PlayerInteractable.cs    # Abstract interactable base class
+│       ├── InteractableTerminal.cs  # Hackable review terminal
+│       ├── UploadZone.cs            # Win-condition upload gate
+│       ├── TeacherAI.cs             # Patrol / chase / stun / defeat state machine
+│       ├── CodeProjectile.cs        # Player projectile with code-label display
+│       ├── CharacterMotionController.cs
+│       ├── SimpleModelAnimator.cs
+│       ├── BillboardAdScreen.cs
+│       ├── PrototypeAudioBank.cs
+│       └── LanguageOption.cs
+├── Scenes/Main.unity                # Single scene (regenerate via menu item)
+├── Materials/                       # 69 procedural materials
+├── ThirdParty/Kenney/               # CC0 assets (characters, city, roads, UI, audio)
+├── StreamingAssets/
+├── Resources/
+└── Imported/
+```
+
+### Scene Regeneration
+
+1. Open the project in Unity 2022.3.62f1.
+2. Run **Everyday Odyssey → Build Prototype Scene** from the menu bar.
+3. The scene, all GameObjects, and UI will be rebuilt procedurally.
+
+---
+
+## Localization
+
+The game supports **Chinese (Simplified)** and **Korean**, switchable at any time
+via in-game buttons. All UI text, prompts, and status messages are served through
+a `Localize(zh, ko)` helper in `GameManager`.
+
+---
+
+## Repository Contents
+
+| Path | Description |
+|---|---|
+| `TalkFile.pdf` | Mentor session report #1 (2026-04-23) — game systems primer, design specification, project planning guide |
+| `1조 계획서.docx` | Project proposal (Korean) — background research, goals & content, expected outcomes |
+| `1组计划书.docx` | Project proposal (Chinese) — same content as above, Simplified Chinese |
+| `Assets/` | Full Unity project source code and assets |
+| `ProjectSettings/` | Unity project configuration (21 files) |
+| `Packages/manifest.json` | Package dependency declaration |
+| `README_PROJECT.md` | Original prototype README |
+
+---
+
+## License
+
+Third-party assets under **Kenney CC0** (public domain).  
+Project code © 2026 Team DAILY, Shinhan University SW-Centered University Project Group.
